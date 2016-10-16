@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="200" id="z0p-Z1-V29"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js7-C8-fXo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上面是UIView,下面是UIImageView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js7-C8-fXo">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,15 +42,6 @@
                                     <constraint firstAttribute="height" constant="150" id="ojh-bn-Gah"/>
                                 </constraints>
                             </imageView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nns-uV-xgB">
-                                <frame key="frameInset" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="nHr-gV-hKf"/>
-                                    <tabBarItem systemItem="more" id="u3Y-z5-YE6"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -73,7 +64,6 @@
                     <connections>
                         <outletCollection property="bubbleTargets" destination="wYp-mi-KIJ" collectionClass="NSMutableArray" id="g84-lZ-3D5"/>
                         <outletCollection property="locationIconTargets" destination="1NK-42-vF8" collectionClass="NSMutableArray" id="BZg-4z-5Yi"/>
-                        <outletCollection property="paperPlaneTargets" destination="nHr-gV-hKf" collectionClass="NSMutableArray" id="qZD-aZ-Aig"/>
                     </connections>
                 </customObject>
             </objects>

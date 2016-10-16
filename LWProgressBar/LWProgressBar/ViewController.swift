@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var firstBarItem: UITabBarItem!
 
     @IBOutlet weak var progressBar: LWProgressBar!
     override func viewDidLoad() {

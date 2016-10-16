@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StyleKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-dX-hOV" customClass="MyDemoView" customModule="StyleKitDemo" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bfu-ln-w9u"/>
+                                    <constraint firstAttribute="height" constant="200" id="z0p-Z1-V29"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js7-C8-fXo">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wYp-mi-KIJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="OxK-qk-Fgq"/>
+                                    <constraint firstAttribute="width" constant="150" id="hwL-sW-SAA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1NK-42-vF8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="KLE-Oh-eHJ"/>
+                                    <constraint firstAttribute="height" constant="150" id="ojh-bn-Gah"/>
+                                </constraints>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nns-uV-xgB">
+                                <frame key="frameInset" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="nHr-gV-hKf"/>
+                                    <tabBarItem systemItem="more" id="u3Y-z5-YE6"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CfQ-dX-hOV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="KEt-W4-Cmk"/>
+                            <constraint firstItem="CfQ-dX-hOV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L5k-e4-DcJ"/>
+                            <constraint firstItem="Js7-C8-fXo" firstAttribute="top" secondItem="CfQ-dX-hOV" secondAttribute="bottom" constant="23" id="MLe-Sn-OdA"/>
+                            <constraint firstItem="1NK-42-vF8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="86" id="ODG-F1-64m"/>
+                            <constraint firstItem="Js7-C8-fXo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oa5-Lc-q4M"/>
+                            <constraint firstItem="wYp-mi-KIJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-86" id="QYP-fn-hjB"/>
+                            <constraint firstItem="wYp-mi-KIJ" firstAttribute="top" secondItem="1NK-42-vF8" secondAttribute="top" id="afa-yC-e8a"/>
+                            <constraint firstItem="wYp-mi-KIJ" firstAttribute="top" secondItem="Js7-C8-fXo" secondAttribute="bottom" constant="59" id="xTV-sZ-KAm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Js7-C8-fXo" id="IjP-mm-Pvn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="und-yN-YFI" customClass="MyStyleKit" customModule="StyleKitDemo" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="bubbleTargets" destination="wYp-mi-KIJ" collectionClass="NSMutableArray" id="g84-lZ-3D5"/>
+                        <outletCollection property="locationIconTargets" destination="1NK-42-vF8" collectionClass="NSMutableArray" id="BZg-4z-5Yi"/>
+                        <outletCollection property="paperPlaneTargets" destination="nHr-gV-hKf" collectionClass="NSMutableArray" id="qZD-aZ-Aig"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="72.413793103448285"/>
+        </scene>
+    </scenes>
+</document>

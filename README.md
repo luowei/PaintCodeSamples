@@ -17,3 +17,9 @@ StyleKitDemo
 -------
 ## 自定义绘制
 ![自定义绘制](./doc/SimpleDraw.gif)
+
+ButtonView
+-------
+## 自定义按钮
+![自定义按钮](./doc/ButtonView.gif)
+

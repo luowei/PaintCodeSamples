@@ -13,7 +13,7 @@ class LWProgressBar: UIView {
 
     private var _innerProgress:CGFloat = 0.5
     
-    var progress: CGFloat{
+    @IBInspectable var progress: CGFloat{
         set(newProgress){
             if newProgress > 1.0 {
                 _innerProgress = 1.0

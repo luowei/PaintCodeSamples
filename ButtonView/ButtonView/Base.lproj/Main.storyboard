@@ -31,6 +31,9 @@
                                     <constraint firstAttribute="height" constant="60" id="cmf-fH-7dq"/>
                                     <constraint firstAttribute="width" constant="240" id="lx9-gR-klA"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="btnText" value="这是第二按钮"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzF-dn-j5d" customClass="MyCustomBtn" customModule="ButtonView" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,6 +41,9 @@
                                     <constraint firstAttribute="height" constant="60" id="WOn-W5-bvq"/>
                                     <constraint firstAttribute="width" constant="300" id="gTA-kV-Gun"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="btnText" value="Hello World !"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -17,73 +17,174 @@ public class MyStyleKit : NSObject {
     //// Cache
     
     private struct Cache {
-        static let color: UIColor = UIColor(red: 0.023, green: 0.648, blue: 0.023, alpha: 1.000)
+        static let normalColor: UIColor = UIColor(red: 0.023, green: 0.648, blue: 0.023, alpha: 1.000)
     }
     
     //// Colors
     
-    public class var color: UIColor { return Cache.color }
+    public class var normalColor: UIColor { return Cache.normalColor }
     
     //// Drawing Methods
     
-    public class func drawCanvas1(frame: CGRect = CGRect(x:43, y:36, width:113, height:44), btnText: String = "确 定") {
+    public class func drawMyCustomButton( frame: CGRect = CGRect(x:11, y:8, width:113, height:52), btnText: String = "确 定", presse: Bool = true) {
         //// General Declarations
         guard let context = UIGraphicsGetCurrentContext() as CGContext? else{
             return
         }
         
         //// Color Declarations
-        let color2 = MyStyleKit.color.colorWithHue(newHue: 0.2)
-        let color3 = MyStyleKit.color.colorWithBrightness(newBrightness: 0.4)
-        
-        //// Rectangle Drawing
-        let rect = CGRect(x:frame.minX + floor((frame.width - 8) * 0.07619 + 0.5), y:frame.minY + floor((frame.height - 6) * 0.18421 + 0.5), width:frame.width - 8 - floor((frame.width - 8) * 0.07619 + 0.5), height:frame.height - 6 - floor((frame.height - 6) * 0.18421 + 0.5))
-        let rectanglePath = UIBezierPath(roundedRect: rect, cornerRadius: 5)
-        color2.setFill()
-        rectanglePath.fill()
-        MyStyleKit.color.setStroke()
-        rectanglePath.lineWidth = 2
-        rectanglePath.stroke()
+        let normalFillColor = MyStyleKit.normalColor.colorWithHue(newHue: 0.2)
+        let normalInnerColor = MyStyleKit.normalColor.colorWithBrightness(newBrightness: 0.4)
+        let pressedColor = MyStyleKit.normalColor.colorWithHue(newHue: 0.1)
+        let pressedFillColor = MyStyleKit.normalColor.colorWithSaturation(newSaturation: 0.2)
+        let pressedInnerColor = MyStyleKit.normalColor.colorWithBrightness(newBrightness: 0.3)
         
         
-        //// Oval Drawing
-        let ovalPath = UIBezierPath(ovalIn: CGRect(x:frame.minX + floor(frame.width * 0.09735 + 0.5), y:frame.minY + floor(frame.height * 0.23864) + 0.5, width:floor(frame.width * 0.30088 + 0.5) - floor(frame.width * 0.09735 + 0.5), height:floor(frame.height * 0.78409) - floor(frame.height * 0.23864)))
-        color3.setStroke()
-        ovalPath.lineWidth = 2
-        ovalPath.stroke()
+        //// Subframes
+        let normal: CGRect = CGRect(x:frame.minX + 8, y:frame.minY + 7, width:frame.width - 16, height:frame.height - 13)
+        let pressed: CGRect = CGRect(x:frame.minX + 8, y:frame.minY + 7, width:frame.width - 16, height:frame.height - 13)
         
         
-        //// Star Drawing
-        let starPath = UIBezierPath()
-        starPath.move(to: CGPoint(x:frame.minX + 0.20182 * frame.width, y:frame.minY + 0.28409 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.21906 * frame.width, y:frame.minY + 0.43885 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.27356 * frame.width, y:frame.minY + 0.44038 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.23199 * frame.width, y:frame.minY + 0.54600 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.24616 * frame.width, y:frame.minY + 0.69327 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.20613 * frame.width, y:frame.minY + 0.61742 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.15872 * frame.width, y:frame.minY + 0.70076 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.17165 * frame.width, y:frame.minY + 0.54600 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.13008 * frame.width, y:frame.minY + 0.44038 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.18458 * frame.width, y:frame.minY + 0.43885 * frame.height))
-        starPath.addLine(to:CGPoint(x:frame.minX + 0.20182 * frame.width, y:frame.minY + 0.28409 * frame.height))
-        starPath.close()
-        color3.setStroke()
-        starPath.lineWidth = 1
-        starPath.stroke()
+        //// Normal
+        //// Normal Rectangle Drawing
+        let normalRectanglePath = UIBezierPath(roundedRect: CGRect(x:normal.minX + floor(normal.width * 0.00000 + 0.5), y:normal.minY + floor(normal.height * 0.00000 + 0.5), width:floor(normal.width * 1.00000 + 0.5) - floor(normal.width * 0.00000 + 0.5), height:floor(normal.height * 1.00000 + 0.5) - floor(normal.height * 0.00000 + 0.5)), cornerRadius: 5)
+        normalFillColor.setFill()
+        normalRectanglePath.fill()
+        MyStyleKit.normalColor.setStroke()
+        normalRectanglePath.lineWidth = 2
+        normalRectanglePath.stroke()
         
         
-        //// Text Drawing
-        let textRect = CGRect(x:frame.minX + floor(frame.width * 0.32743 + 0.5), y:frame.minY + floor(frame.height * 0.31818 + 0.5), width:floor(frame.width * 0.90265 + 0.5) - floor(frame.width * 0.32743 + 0.5), height:floor(frame.height * 0.70455 + 0.5) - floor(frame.height * 0.31818 + 0.5))
-        let textStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
-        textStyle.alignment = .center
+        //// Normal Oval Drawing
+        let normalOvalPath = UIBezierPath(ovalIn: CGRect(x:normal.minX + floor(normal.width * 0.03093 + 0.5), y:normal.minY + floor(normal.height * 0.11538) + 0.5, width:floor(normal.width * 0.26804 + 0.5) - floor(normal.width * 0.03093 + 0.5), height:floor(normal.height * 0.88462) - floor(normal.height * 0.11538)))
+        normalInnerColor.setStroke()
+        normalOvalPath.lineWidth = 2
+        normalOvalPath.stroke()
         
-        let textFontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.labelFontSize), NSForegroundColorAttributeName: color3, NSParagraphStyleAttributeName: textStyle]
         
-        let textTextHeight: CGFloat = NSString(string: btnText).boundingRect(with: CGSize(width:textRect.width, height:CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
+        //// Normal Star Drawing
+        let normalStarPath = UIBezierPath()
+        normalStarPath.move(to:CGPoint(x:normal.minX + 0.15212 * normal.width, y:normal.minY + 0.19223 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.17224 * normal.width, y:normal.minY + 0.40288 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.23582 * normal.width, y:normal.minY + 0.40497 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.18733 * normal.width, y:normal.minY + 0.54872 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.20385 * normal.width, y:normal.minY + 0.74918 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.15715 * normal.width, y:normal.minY + 0.64594 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.10184 * normal.width, y:normal.minY + 0.75936 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.11692 * normal.width, y:normal.minY + 0.54872 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.06843 * normal.width, y:normal.minY + 0.40497 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.13201 * normal.width, y:normal.minY + 0.40288 * normal.height))
+        normalStarPath.addLine(to:CGPoint(x:normal.minX + 0.15212 * normal.width, y:normal.minY + 0.19223 * normal.height))
+        normalStarPath.close()
+        normalInnerColor.setStroke()
+        normalStarPath.lineWidth = 1
+        normalStarPath.stroke()
+        
+        
+        //// Normal Text Drawing
+        let normalTextRect = CGRect(x:normal.minX + floor(normal.width * 0.29897 + 0.5), y:normal.minY + floor(normal.height * 0.25641 + 0.5), width:floor(normal.width * 0.96907 + 0.5) - floor(normal.width * 0.29897 + 0.5), height:floor(normal.height * 0.76923 + 0.5) - floor(normal.height * 0.25641 + 0.5))
+        let normalTextStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+        normalTextStyle.alignment = .center
+        
+        let normalTextFontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.labelFontSize), NSForegroundColorAttributeName: normalInnerColor, NSParagraphStyleAttributeName: normalTextStyle]
+        
+        let normalTextTextHeight: CGFloat = NSString(string: btnText).boundingRect(with:CGSize(width:normalTextRect.width, height:CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: normalTextFontAttributes, context: nil).size.height
         context.saveGState()
-        context.clip(to: textRect);
-        NSString(string: btnText).draw(in: CGRect(x:textRect.minX, y:textRect.minY + (textRect.height - textTextHeight) / 2, width:textRect.width, height:textTextHeight), withAttributes: textFontAttributes)
+        context.clip(to: normalTextRect);
+        NSString(string: btnText).draw(in:CGRect(x:normalTextRect.minX, y:normalTextRect.minY + (normalTextRect.height - normalTextTextHeight) / 2, width:normalTextRect.width, height:normalTextTextHeight), withAttributes: normalTextFontAttributes)
         context.restoreGState()
+        
+        
+        
+        
+        //// Pressed
+        if (presse) {
+            //// Pressed Rectangle Drawing
+            let pressedRectanglePath = UIBezierPath(roundedRect: CGRect(x:pressed.minX + floor(pressed.width * 0.00000 + 0.5), y:pressed.minY + floor(pressed.height * 0.00000 + 0.5), width:floor(pressed.width * 1.00000 + 0.5) - floor(pressed.width * 0.00000 + 0.5), height:floor(pressed.height * 1.00000 + 0.5) - floor(pressed.height * 0.00000 + 0.5)), cornerRadius: 5)
+            pressedFillColor.setFill()
+            pressedRectanglePath.fill()
+            pressedColor.setStroke()
+            pressedRectanglePath.lineWidth = 2
+            pressedRectanglePath.stroke()
+            
+            
+            //// Pressed  Oval Drawing
+            let pressedOvalPath = UIBezierPath(ovalIn: CGRect(x:pressed.minX + floor(pressed.width * 0.03093 + 0.5), y:pressed.minY + floor(pressed.height * 0.11538) + 0.5, width:floor(pressed.width * 0.26804 + 0.5) - floor(pressed.width * 0.03093 + 0.5), height:floor(pressed.height * 0.88462) - floor(pressed.height * 0.11538)))
+            pressedInnerColor.setStroke()
+            pressedOvalPath.lineWidth = 2
+            pressedOvalPath.stroke()
+            
+            
+            //// Pressed  Star Drawing
+            let pressedStarPath = UIBezierPath()
+            pressedStarPath.move(to:CGPoint(x:pressed.minX + 0.15212 * pressed.width, y:pressed.minY + 0.19223 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.17224 * pressed.width, y:pressed.minY + 0.40288 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.23582 * pressed.width, y:pressed.minY + 0.40497 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.18733 * pressed.width, y:pressed.minY + 0.54872 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.20385 * pressed.width, y:pressed.minY + 0.74918 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.15715 * pressed.width, y:pressed.minY + 0.64594 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.10184 * pressed.width, y:pressed.minY + 0.75936 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.11692 * pressed.width, y:pressed.minY + 0.54872 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.06843 * pressed.width, y:pressed.minY + 0.40497 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.13201 * pressed.width, y:pressed.minY + 0.40288 * pressed.height))
+            pressedStarPath.addLine(to:CGPoint(x:pressed.minX + 0.15212 * pressed.width, y:pressed.minY + 0.19223 * pressed.height))
+            pressedStarPath.close()
+            pressedInnerColor.setStroke()
+            pressedStarPath.lineWidth = 1
+            pressedStarPath.stroke()
+            
+            
+            //// Pressed Text Drawing
+            let pressedTextRect = CGRect(x:pressed.minX + floor(pressed.width * 0.29897 + 0.5), y:pressed.minY + floor(pressed.height * 0.25641 + 0.5), width:floor(pressed.width * 0.96907 + 0.5) - floor(pressed.width * 0.29897 + 0.5), height:floor(pressed.height * 0.76923 + 0.5) - floor(pressed.height * 0.25641 + 0.5))
+            let pressedTextStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+            pressedTextStyle.alignment = .center
+            
+            let pressedTextFontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.labelFontSize), NSForegroundColorAttributeName: pressedInnerColor, NSParagraphStyleAttributeName: pressedTextStyle]
+            
+            let pressedTextTextHeight: CGFloat = NSString(string: btnText).boundingRect(with: CGSize(width:pressedTextRect.width, height:CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin,attributes: pressedTextFontAttributes, context: nil).size.height
+            context.saveGState()
+            context.clip(to: pressedTextRect);
+            NSString(string: btnText).draw(in:CGRect(x:pressedTextRect.minX, y:pressedTextRect.minY + (pressedTextRect.height - pressedTextTextHeight) / 2, width:pressedTextRect.width, height:pressedTextTextHeight), withAttributes: pressedTextFontAttributes)
+            context.restoreGState()
+        }
+    }
+    
+    public class func drawBubbleButton( frame: CGRect = CGRect(x:14, y:10, width:94, height:51)) {
+        //// Color Declarations
+        let normalFillColor = MyStyleKit.normalColor.colorWithHue(newHue: 0.2)
+        
+        //// Bezier Drawing
+        let bezierPath = UIBezierPath()
+        bezierPath.move(to:CGPoint(x:frame.minX - 11.35, y:frame.minY + 7.33))
+        bezierPath.addLine(to:CGPoint(x:frame.minX - 11.16, y:frame.minY + 7.37))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX - 8.37, y:frame.minY + 10.16), controlPoint1: CGPoint(x:frame.minX - 9.86, y:frame.minY + 7.85), controlPoint2: CGPoint(x:frame.minX - 8.85, y:frame.minY + 8.86))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX - 8, y:frame.minY + 14.64), controlPoint1: CGPoint(x:frame.minX - 8, y:frame.minY + 11.34), controlPoint2: CGPoint(x:frame.minX - 8, y:frame.minY + 12.44))
+        bezierPath.addLine(to:CGPoint(x:frame.minX - 8, y:frame.maxY - 21.64))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX - 8.33, y:frame.maxY - 17.35), controlPoint1: CGPoint(x:frame.minX - 8, y:frame.maxY - 19.44), controlPoint2: CGPoint(x:frame.minX - 8, y:frame.maxY - 18.34))
+        bezierPath.addLine(to:CGPoint(x:frame.minX - 8.37, y:frame.maxY - 17.16))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX - 11.16, y:frame.maxY - 14.37), controlPoint1: CGPoint(x:frame.minX - 8.85, y:frame.maxY - 15.86), controlPoint2: CGPoint(x:frame.minX - 9.86, y:frame.maxY - 14.85))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX - 15.64, y:frame.maxY - 14), controlPoint1: CGPoint(x:frame.minX - 12.34, y:frame.maxY - 14), controlPoint2: CGPoint(x:frame.minX - 13.44, y:frame.maxY - 14))
+        bezierPath.addLine(to:CGPoint(x:frame.minX + 0.56900 * frame.width, y:frame.maxY - 14))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX + 0.50650 * frame.width, y:frame.maxY - 7), controlPoint1: CGPoint(x:frame.minX + 0.53883 * frame.width, y:frame.maxY - 10.62), controlPoint2: CGPoint(x:frame.minX + 0.50650 * frame.width, y:frame.maxY - 7))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX + 0.44400 * frame.width, y:frame.maxY - 14), controlPoint1: CGPoint(x:frame.minX + 0.50650 * frame.width, y:frame.maxY - 7), controlPoint2: CGPoint(x:frame.minX + 0.47417 * frame.width, y:frame.maxY - 10.62))
+        bezierPath.addLine(to:CGPoint(x:frame.minX + 15.64, y:frame.maxY - 14))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX + 11.35, y:frame.maxY - 14.33), controlPoint1: CGPoint(x:frame.minX + 13.44, y:frame.maxY - 14), controlPoint2: CGPoint(x:frame.minX + 12.34, y:frame.maxY - 14))
+        bezierPath.addLine(to:CGPoint(x:frame.minX + 11.16, y:frame.maxY - 14.37))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX + 8.37, y:frame.maxY - 17.16), controlPoint1: CGPoint(x:frame.minX + 9.86, y:frame.maxY - 14.85), controlPoint2: CGPoint(x:frame.minX + 8.85, y:frame.maxY - 15.86))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX + 8, y:frame.maxY - 21.64), controlPoint1: CGPoint(x:frame.minX + 8, y:frame.maxY - 18.34), controlPoint2: CGPoint(x:frame.minX + 8, y:frame.maxY - 19.44))
+        bezierPath.addLine(to:CGPoint(x:frame.minX + 8, y:frame.minY + 14.64))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX + 8.33, y:frame.minY + 10.35), controlPoint1: CGPoint(x:frame.minX + 8, y:frame.minY + 12.44), controlPoint2: CGPoint(x:frame.minX + 8, y:frame.minY + 11.34))
+        bezierPath.addLine(to:CGPoint(x:frame.minX + 8.37, y:frame.minY + 10.16))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX + 11.16, y:frame.minY + 7.37), controlPoint1: CGPoint(x:frame.minX + 8.85, y:frame.minY + 8.86), controlPoint2: CGPoint(x:frame.minX + 9.86, y:frame.minY + 7.85))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX + 15.64, y:frame.minY + 7), controlPoint1: CGPoint(x:frame.minX + 12.34, y:frame.minY + 7), controlPoint2: CGPoint(x:frame.minX + 13.44, y:frame.minY + 7))
+        bezierPath.addLine(to:CGPoint(x:frame.minX - 15.64, y:frame.minY + 7))
+        bezierPath.addCurve(to:CGPoint(x:frame.minX - 11.35, y:frame.minY + 7.33), controlPoint1: CGPoint(x:frame.minX - 13.44, y:frame.minY + 7), controlPoint2: CGPoint(x:frame.minX - 12.34, y:frame.minY + 7))
+        bezierPath.close()
+        normalFillColor.setFill()
+        bezierPath.fill()
+        MyStyleKit.normalColor.setStroke()
+        bezierPath.lineWidth = 2
+        bezierPath.stroke()
     }
     
 }

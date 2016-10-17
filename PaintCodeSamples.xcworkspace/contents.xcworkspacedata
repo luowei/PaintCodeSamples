@@ -19,4 +19,7 @@
    <FileRef
       location = "group:SinMotion/SinMotion.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:DashBoard/DashBoard.xcodeproj">
+   </FileRef>
 </Workspace>

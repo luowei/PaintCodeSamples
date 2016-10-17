@@ -27,3 +27,8 @@ SinMotion
 -------
 ## 正弦运动
 ![正弦运动](./doc/SinMotion.gif)
+
+DashBoard
+-------
+## 仪表盘
+![仪表盘](./doc/DashBoard.gif)

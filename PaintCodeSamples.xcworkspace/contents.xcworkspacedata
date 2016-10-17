@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
       location = "group:LWProgressBar/LWProgressBar.xcodeproj">
    </FileRef>
    <FileRef
@@ -12,5 +15,8 @@
    </FileRef>
    <FileRef
       location = "group:ButtonView/ButtonView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SinMotion/SinMotion.xcodeproj">
    </FileRef>
 </Workspace>

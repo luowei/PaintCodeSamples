@@ -23,3 +23,7 @@ ButtonView
 ## 自定义按钮
 ![自定义按钮](./doc/ButtonView.gif)
 
+SinMotion
+-------
+## 正弦运动
+![正弦运动](./doc/SinMotion.gif)

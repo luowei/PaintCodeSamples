@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SinMotion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84h-gn-AcM" customClass="MySinMotionView" customModule="SinMotion" customModuleProvider="target">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ZyK-QN-mns"/>
+                                    <constraint firstAttribute="height" constant="120" id="ioE-ay-39a"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4mg-tP-uWi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="kYw-MF-vCq"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="IdC-lJ-tNM"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="84h-gn-AcM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Ed-Ly-5JZ"/>
+                            <constraint firstItem="84h-gn-AcM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oO7-Qz-RZX"/>
+                            <constraint firstItem="4mg-tP-uWi" firstAttribute="top" secondItem="84h-gn-AcM" secondAttribute="bottom" constant="72" id="pQ2-Ft-TWS"/>
+                            <constraint firstItem="4mg-tP-uWi" firstAttribute="centerX" secondItem="84h-gn-AcM" secondAttribute="centerX" id="tgh-hH-krm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mySinMotionView" destination="84h-gn-AcM" id="dKY-sq-MwY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

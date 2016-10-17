@@ -22,4 +22,7 @@
    <FileRef
       location = "group:DashBoard/DashBoard.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ClockBoard/ClockBoard.xcodeproj">
+   </FileRef>
 </Workspace>

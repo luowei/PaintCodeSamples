@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClockBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIc-bI-Xxj" customClass="RealClockView" customModule="ClockBoard" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="DXO-gZ-gQg"/>
+                                    <constraint firstAttribute="width" constant="200" id="sdA-nl-kql"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OYR-7L-PqF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="m2J-s4-wuO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="realSizeChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="wWF-I9-c0H"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYi-KQ-5sL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="MvI-9B-IFq">
+                                <connections>
+                                    <action selector="realMinChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="1i5-xz-FF9"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZJ-eV-RYW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="bhr-mg-tjM">
+                                <connections>
+                                    <action selector="realHorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="vod-PG-dr4"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPf-Bz-ds4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-yw-lv6" customClass="MyClocksView" customModule="ClockBoard" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="kWm-m2-HHR"/>
+                                    <constraint firstAttribute="height" constant="115" id="y3W-6D-D4z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MvI-9B-IFq" firstAttribute="top" secondItem="OYR-7L-PqF" secondAttribute="bottom" constant="4" id="772-ua-toy"/>
+                            <constraint firstItem="bhr-mg-tjM" firstAttribute="top" secondItem="MvI-9B-IFq" secondAttribute="bottom" constant="4" id="Gnh-5c-XBM"/>
+                            <constraint firstItem="XoI-yw-lv6" firstAttribute="top" secondItem="bhr-mg-tjM" secondAttribute="bottom" constant="50" id="H2d-Tm-ZgV"/>
+                            <constraint firstItem="OYR-7L-PqF" firstAttribute="width" secondItem="MvI-9B-IFq" secondAttribute="width" id="OrS-WJ-usS"/>
+                            <constraint firstItem="OYR-7L-PqF" firstAttribute="trailing" secondItem="sIc-bI-Xxj" secondAttribute="trailing" id="VI4-lv-Pbz"/>
+                            <constraint firstItem="OYR-7L-PqF" firstAttribute="leading" secondItem="eYi-KQ-5sL" secondAttribute="trailing" constant="1" id="bUW-N3-FaY"/>
+                            <constraint firstItem="MvI-9B-IFq" firstAttribute="width" secondItem="bhr-mg-tjM" secondAttribute="width" id="c7T-5f-2uA"/>
+                            <constraint firstItem="OYR-7L-PqF" firstAttribute="top" secondItem="sIc-bI-Xxj" secondAttribute="bottom" constant="21" id="cKy-tX-ofb"/>
+                            <constraint firstItem="sIc-bI-Xxj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="fR9-7H-eXI"/>
+                            <constraint firstItem="OYR-7L-PqF" firstAttribute="centerY" secondItem="eYi-KQ-5sL" secondAttribute="centerY" id="jHE-2d-bjV"/>
+                            <constraint firstItem="MvI-9B-IFq" firstAttribute="leading" secondItem="zZJ-eV-RYW" secondAttribute="trailing" constant="1" id="lHd-lR-Igc"/>
+                            <constraint firstItem="MvI-9B-IFq" firstAttribute="centerX" secondItem="bhr-mg-tjM" secondAttribute="centerX" id="n24-tC-c7b"/>
+                            <constraint firstItem="sIc-bI-Xxj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rkK-6f-AYd"/>
+                            <constraint firstItem="MvI-9B-IFq" firstAttribute="centerY" secondItem="zZJ-eV-RYW" secondAttribute="centerY" id="uVV-UC-79w"/>
+                            <constraint firstItem="OYR-7L-PqF" firstAttribute="centerX" secondItem="MvI-9B-IFq" secondAttribute="centerX" id="vHt-q5-jAf"/>
+                            <constraint firstItem="bhr-mg-tjM" firstAttribute="centerY" secondItem="EPf-Bz-ds4" secondAttribute="centerY" id="wHn-Ux-YnK"/>
+                            <constraint firstItem="XoI-yw-lv6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wLw-o4-cOB"/>
+                            <constraint firstItem="bhr-mg-tjM" firstAttribute="leading" secondItem="EPf-Bz-ds4" secondAttribute="trailing" constant="1" id="xeb-OU-4tb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heightCons" destination="DXO-gZ-gQg" id="HTg-Pj-8dj"/>
+                        <outlet property="realClockView" destination="sIc-bI-Xxj" id="c2S-oo-1UF"/>
+                        <outlet property="widthCons" destination="sdA-nl-kql" id="sOT-97-aFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>

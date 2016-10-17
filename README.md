@@ -32,3 +32,9 @@ DashBoard
 -------
 ## 仪表盘
 ![仪表盘](./doc/DashBoard.gif)
+
+ClockBoard
+-------
+## 时钟表
+![时钟表](./doc/ClockBoard.gif)
+

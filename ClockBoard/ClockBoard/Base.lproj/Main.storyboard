@@ -62,22 +62,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="kWm-m2-HHR"/>
-                                    <constraint firstAttribute="height" constant="115" id="y3W-6D-D4z"/>
+                                    <constraint firstAttribute="height" constant="120" id="y3W-6D-D4z"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MvI-9B-IFq" firstAttribute="top" secondItem="OYR-7L-PqF" secondAttribute="bottom" constant="4" id="772-ua-toy"/>
                             <constraint firstItem="bhr-mg-tjM" firstAttribute="top" secondItem="MvI-9B-IFq" secondAttribute="bottom" constant="4" id="Gnh-5c-XBM"/>
                             <constraint firstItem="XoI-yw-lv6" firstAttribute="top" secondItem="bhr-mg-tjM" secondAttribute="bottom" constant="50" id="H2d-Tm-ZgV"/>
                             <constraint firstItem="OYR-7L-PqF" firstAttribute="width" secondItem="MvI-9B-IFq" secondAttribute="width" id="OrS-WJ-usS"/>
-                            <constraint firstItem="OYR-7L-PqF" firstAttribute="trailing" secondItem="sIc-bI-Xxj" secondAttribute="trailing" id="VI4-lv-Pbz"/>
+                            <constraint firstItem="sIc-bI-Xxj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-186" id="P8P-Y3-4os"/>
                             <constraint firstItem="OYR-7L-PqF" firstAttribute="leading" secondItem="eYi-KQ-5sL" secondAttribute="trailing" constant="1" id="bUW-N3-FaY"/>
                             <constraint firstItem="MvI-9B-IFq" firstAttribute="width" secondItem="bhr-mg-tjM" secondAttribute="width" id="c7T-5f-2uA"/>
                             <constraint firstItem="OYR-7L-PqF" firstAttribute="top" secondItem="sIc-bI-Xxj" secondAttribute="bottom" constant="21" id="cKy-tX-ofb"/>
-                            <constraint firstItem="sIc-bI-Xxj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="fR9-7H-eXI"/>
                             <constraint firstItem="OYR-7L-PqF" firstAttribute="centerY" secondItem="eYi-KQ-5sL" secondAttribute="centerY" id="jHE-2d-bjV"/>
+                            <constraint firstItem="OYR-7L-PqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="21" id="l0F-mk-jnr"/>
                             <constraint firstItem="MvI-9B-IFq" firstAttribute="leading" secondItem="zZJ-eV-RYW" secondAttribute="trailing" constant="1" id="lHd-lR-Igc"/>
                             <constraint firstItem="MvI-9B-IFq" firstAttribute="centerX" secondItem="bhr-mg-tjM" secondAttribute="centerX" id="n24-tC-c7b"/>
                             <constraint firstItem="sIc-bI-Xxj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rkK-6f-AYd"/>
@@ -89,6 +89,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clocksView" destination="XoI-yw-lv6" id="eOs-B9-WEy"/>
                         <outlet property="heightCons" destination="DXO-gZ-gQg" id="HTg-Pj-8dj"/>
                         <outlet property="realClockView" destination="sIc-bI-Xxj" id="c2S-oo-1UF"/>
                         <outlet property="widthCons" destination="sdA-nl-kql" id="sOT-97-aFj"/>

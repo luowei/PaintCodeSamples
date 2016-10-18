@@ -12,6 +12,54 @@
 
 import UIKit
 
+extension NSDate
+{
+    func hour() -> Int
+    {
+        //Get Hour
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.Hour, fromDate: self)
+        let hour = components.hour
+        
+        //Return Hour
+        return hour
+    }
+    
+    
+    func minute() -> Int
+    {
+        //Get Minute
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.Minute, fromDate: self)
+        let minute = components.minute
+        
+        //Return Minute
+        return minute
+    }
+    
+    func second() -> Int
+    {
+        //Get Minute
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.Second, fromDate: self)
+        let minute = components.second
+        
+        //Return Minute
+        return minute
+    }
+    
+    func toShortTimeString() -> String
+    {
+        //Get Short Time String
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = .ShortStyle
+        let timeString = formatter.stringFromDate(self)
+        
+        //Return Short Time String
+        return timeString
+    }
+}
+
 public class ClocksKit : NSObject {
 
     //// Drawing Methods
@@ -346,6 +394,16 @@ public class ClocksKit : NSObject {
         CGContextRestoreGState(context!)
     }
 
+    static var hours1:CGFloat = CGFloat(NSDate().hour())
+    static var minutes1:CGFloat = CGFloat(NSDate().minute())
+    static var seconds1:CGFloat = CGFloat(NSDate().second())
+    static var hours2:CGFloat = CGFloat(NSDate().hour())
+    static var minutes2:CGFloat = CGFloat(NSDate().minute())
+    static var seconds2:CGFloat = CGFloat(NSDate().second())
+    static var hours3:CGFloat = CGFloat(NSDate().hour())
+    static var minutes3:CGFloat = CGFloat(NSDate().minute())
+    static var seconds3:CGFloat = CGFloat(NSDate().second())
+    
     public class func drawClockPlayground(frame frame: CGRect = CGRect(x: 32, y: 21, width: 288, height: 109), numbersColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000), darkHandsColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000), lightHandColor: UIColor = UIColor(red: 0.320, green: 0.800, blue: 0.638, alpha: 1.000), rimColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000), tickColor: UIColor = UIColor(red: 0.668, green: 0.668, blue: 0.668, alpha: 1.000), faceColor: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
@@ -364,7 +422,7 @@ public class ClocksKit : NSObject {
         CGContextTranslateCTM(context!, clock1Rect.origin.x, clock1Rect.origin.y)
         CGContextScaleCTM(context!, clock1Rect.size.width / 260, clock1Rect.size.height / 260)
 
-        ClocksKit.drawClock(numbersColor: color5, darkHandsColor: color2, lightHandColor: color, rimColor: color2, tickColor: tickColor, faceColor: faceColor, hours: 15, minutes: 56, seconds: 40)
+        ClocksKit.drawClock(numbersColor: color5, darkHandsColor: color2, lightHandColor: color, rimColor: color2, tickColor: tickColor, faceColor: faceColor, hours: hours1, minutes: minutes1, seconds: seconds1)
         CGContextRestoreGState(context!)
 
 
@@ -375,7 +433,7 @@ public class ClocksKit : NSObject {
         CGContextTranslateCTM(context!, clock2Rect.origin.x, clock2Rect.origin.y)
         CGContextScaleCTM(context!, clock2Rect.size.width / 260, clock2Rect.size.height / 260)
 
-        ClocksKit.drawClock(numbersColor: numbersColor, darkHandsColor: darkHandsColor, lightHandColor: lightHandColor, rimColor: rimColor, tickColor: tickColor, faceColor: faceColor, hours: 23, minutes: 43, seconds: 15)
+        ClocksKit.drawClock(numbersColor: numbersColor, darkHandsColor: darkHandsColor, lightHandColor: lightHandColor, rimColor: rimColor, tickColor: tickColor, faceColor: faceColor, hours: hours2, minutes: minutes2, seconds: seconds2)
         CGContextRestoreGState(context!)
 
 
@@ -386,7 +444,7 @@ public class ClocksKit : NSObject {
         CGContextTranslateCTM(context!, clock3Rect.origin.x, clock3Rect.origin.y)
         CGContextScaleCTM(context!, clock3Rect.size.width / 260, clock3Rect.size.height / 260)
 
-        ClocksKit.drawClock(numbersColor: color4, darkHandsColor: color4, lightHandColor: color5, rimColor: color4, tickColor: color4, faceColor: color3, hours: 14, minutes: -10, seconds: 43)
+        ClocksKit.drawClock(numbersColor: color4, darkHandsColor: color4, lightHandColor: color5, rimColor: color4, tickColor: color4, faceColor: color3, hours: hours3, minutes: minutes3, seconds: seconds3)
         CGContextRestoreGState(context!)
     }
 

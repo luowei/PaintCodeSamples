@@ -9,6 +9,10 @@
 import UIKit
 
 class MyClocksView: UIView {
+    
+    override func awakeFromNib() {
+        
+    }
 
     override func drawRect(rect: CGRect) {
         ClocksKit.drawClockPlayground(frame: self.bounds)

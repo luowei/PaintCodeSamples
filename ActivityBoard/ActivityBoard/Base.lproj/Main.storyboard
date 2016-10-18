@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ActivityBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Do-w7-DRB" customClass="MyActivityView" customModule="ActivityBoard" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LvQ-sm-LTn"/>
+                                    <constraint firstAttribute="height" constant="200" id="rrI-1y-pYJ"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kpp-GT-Nat" userLabel="Move">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="zcQ-JJ-vja"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="moveChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="QFc-qs-7FJ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVx-f7-bcR">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="t2W-4F-NuU" userLabel="Excercise">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="G3O-sm-PK5"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="exerciseChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="TRr-v3-HFb"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGs-qe-5uT">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SIY-fr-2la" userLabel="Stand">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="nmu-Tj-3Dv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="standChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="fNp-Ie-sWX"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stand:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWB-qO-9Wu">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kpp-GT-Nat" firstAttribute="top" secondItem="3Do-w7-DRB" secondAttribute="bottom" constant="69" id="4a6-Kd-9oR"/>
+                            <constraint firstItem="SIY-fr-2la" firstAttribute="centerX" secondItem="t2W-4F-NuU" secondAttribute="centerX" id="4lE-BF-KUJ"/>
+                            <constraint firstItem="SIY-fr-2la" firstAttribute="leading" secondItem="yWB-qO-9Wu" secondAttribute="trailing" constant="8" id="64T-rQ-svk"/>
+                            <constraint firstItem="t2W-4F-NuU" firstAttribute="top" secondItem="kpp-GT-Nat" secondAttribute="bottom" constant="12" id="8tI-ZH-ujD"/>
+                            <constraint firstItem="yWB-qO-9Wu" firstAttribute="centerY" secondItem="SIY-fr-2la" secondAttribute="centerY" id="9Ps-aq-TUq"/>
+                            <constraint firstItem="GVx-f7-bcR" firstAttribute="centerY" secondItem="kpp-GT-Nat" secondAttribute="centerY" id="FrI-AI-TZk"/>
+                            <constraint firstItem="3Do-w7-DRB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="NhA-cE-Ieg"/>
+                            <constraint firstItem="kpp-GT-Nat" firstAttribute="leading" secondItem="GVx-f7-bcR" secondAttribute="trailing" constant="8" id="OKs-5L-t80"/>
+                            <constraint firstItem="SIY-fr-2la" firstAttribute="top" secondItem="t2W-4F-NuU" secondAttribute="bottom" constant="8" id="Obd-JT-eeM"/>
+                            <constraint firstItem="kpp-GT-Nat" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="25" id="RA9-wU-Ir7"/>
+                            <constraint firstItem="3Do-w7-DRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJs-a7-C9I"/>
+                            <constraint firstItem="fGs-qe-5uT" firstAttribute="centerY" secondItem="t2W-4F-NuU" secondAttribute="centerY" id="oNR-9H-9Tm"/>
+                            <constraint firstItem="t2W-4F-NuU" firstAttribute="centerX" secondItem="kpp-GT-Nat" secondAttribute="centerX" id="sta-lD-KWM"/>
+                            <constraint firstItem="t2W-4F-NuU" firstAttribute="leading" secondItem="fGs-qe-5uT" secondAttribute="trailing" constant="8" id="tAk-qa-6Qz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myActivityView" destination="3Do-w7-DRB" id="OeV-ie-d5g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>

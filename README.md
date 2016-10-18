@@ -38,3 +38,10 @@ ClockBoard
 ## 时钟表
 ![时钟表](./doc/ClockBoard.gif)
 
+ActivityBoard
+-------
+## 环形进度条
+![环形进度条](./doc/ActivityBoard.gif)
+
+
+

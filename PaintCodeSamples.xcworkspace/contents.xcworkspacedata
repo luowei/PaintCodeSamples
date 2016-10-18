@@ -25,4 +25,7 @@
    <FileRef
       location = "group:ClockBoard/ClockBoard.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ActivityBoard/ActivityBoard.xcodeproj">
+   </FileRef>
 </Workspace>

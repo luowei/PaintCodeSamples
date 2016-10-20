@@ -43,5 +43,10 @@ ActivityBoard
 ## 环形进度条
 ![环形进度条](./doc/ActivityBoard.gif)
 
+GraphicDraw
+-------
+## 图形绘制详解 
+![图形绘制](./doc/GraphicDraw.gif)
+
 
 

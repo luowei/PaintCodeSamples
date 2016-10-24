@@ -48,5 +48,11 @@ GraphicDraw
 ## 图形绘制详解 
 ![图形绘制](./doc/GraphicDraw.gif)
 
+HamburgerAnimation
+-------
+## QuartzCode制作的Hamburger动画
+![图形绘制](./doc/HamburgerAnimate.gif)
+
+
 
 

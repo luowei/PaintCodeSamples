@@ -53,6 +53,10 @@ HamburgerAnimation
 ## QuartzCode制作的Hamburger动画
 ![图形绘制](./doc/HamburgerAnimate.gif)
 
+ReplicatorAnimate
+-------
+## QuartzCode制作的Loading动画
+![图形绘制](./doc/ReplicatorAnimate.gif)
 
 
 

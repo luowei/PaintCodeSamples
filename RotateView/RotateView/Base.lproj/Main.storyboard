@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-2q-6j6">
+                                <frame key="frameInset" minX="164" minY="552" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Ao6-aZ-GM8" kind="show" id="xtg-6F-0Zw"/>
+                                </connections>
+                            </button>
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1R-pk-GJu">
+                                <frame key="frameInset" minX="37" minY="183" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PaintCode-SketchPlugin-feature.png" translatesAutoresizingMaskIntoConstraints="NO" id="i3q-jO-8qv">
+                                        <frame key="frameInset" minX="30" minY="30" width="240" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view hidden="YES" verifyAmbiguity="off" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2g-c7-q8G" customClass="LWScaleView">
+                                        <frame key="frameInset" minX="10" minY="10" width="280" height="280"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="baseImage" destination="o1R-pk-GJu" id="LZx-w3-5Xa"/>
+                        <outlet property="imageV" destination="i3q-jO-8qv" id="LMQ-vZ-ftF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="VpK-W9-0wN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+        </scene>
+        <!--Rotate View Controller-->
+        <scene sceneID="C1G-96-nlX">
+            <objects>
+                <viewController id="Ao6-aZ-GM8" customClass="LWRotateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QS0-E0-6lA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zzq-Al-SiB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7qu-wB-6US">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdb-ls-6V8">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ny3-3E-1pF">
+                                        <color key="backgroundColor" red="0.5171414043" green="1" blue="0.46263858489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="OuJ-ap-SIR"/>
+                                            <constraint firstAttribute="width" constant="30" id="iw2-k6-IKA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9sQ-OG-5DM"/>
+                                    <constraint firstItem="ny3-3E-1pF" firstAttribute="leading" secondItem="Vdb-ls-6V8" secondAttribute="leading" id="Tys-a2-HAM"/>
+                                    <constraint firstAttribute="width" constant="200" id="fZ3-vG-60e"/>
+                                    <constraint firstItem="ny3-3E-1pF" firstAttribute="top" secondItem="Vdb-ls-6V8" secondAttribute="top" id="l9m-1B-W7u"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rZ-YX-0bH">
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="VpK-W9-0wN" kind="unwind" unwindAction="unwindSegue:" id="2lW-o0-UBU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atl-ud-7xg">
+                                <state key="normal" title="Scale"/>
+                                <connections>
+                                    <segue destination="H3p-Hw-HkM" kind="show" id="trL-Wl-kbQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="atl-ud-7xg" firstAttribute="top" secondItem="4rZ-YX-0bH" secondAttribute="bottom" constant="8" id="6GN-Dr-rca"/>
+                            <constraint firstItem="atl-ud-7xg" firstAttribute="centerX" secondItem="7qu-wB-6US" secondAttribute="centerX" id="ACR-7w-92i"/>
+                            <constraint firstItem="Vdb-ls-6V8" firstAttribute="centerX" secondItem="7qu-wB-6US" secondAttribute="centerX" id="BQC-ln-hUM"/>
+                            <constraint firstItem="4rZ-YX-0bH" firstAttribute="centerY" secondItem="7qu-wB-6US" secondAttribute="centerY" constant="200" id="DO9-8Y-FME"/>
+                            <constraint firstItem="Vdb-ls-6V8" firstAttribute="centerY" secondItem="7qu-wB-6US" secondAttribute="centerY" constant="-100" id="dfx-fU-8gS"/>
+                            <constraint firstItem="4rZ-YX-0bH" firstAttribute="centerX" secondItem="7qu-wB-6US" secondAttribute="centerX" id="xDW-zy-kUC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rotateView" destination="Vdb-ls-6V8" id="gCd-Fa-i9C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obG-gG-2Go" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="d0Q-tn-IhB" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="104"/>
+        </scene>
+        <!--Scale View Controller-->
+        <scene sceneID="lQY-0B-p0Q">
+            <objects>
+                <viewController id="H3p-Hw-HkM" customClass="LWScaleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KVq-b2-xrg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ydn-v5-nuH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XD8-F1-ofb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJ8-vN-e3f" customClass="LWScaleView">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="WZc-Ne-Sbd"/>
+                                    <constraint firstAttribute="height" constant="300" id="aJf-PM-VpK"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-y9-FD7">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="d0Q-tn-IhB" kind="unwind" unwindAction="unwindSegue:" id="pUe-xC-zDS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ydn-v5-nuH" firstAttribute="top" secondItem="cqA-y9-FD7" secondAttribute="bottom" constant="140" id="RyG-sF-MC2"/>
+                            <constraint firstItem="cqA-y9-FD7" firstAttribute="centerX" secondItem="XD8-F1-ofb" secondAttribute="centerX" id="Xqj-wS-7Y2"/>
+                            <constraint firstItem="lJ8-vN-e3f" firstAttribute="centerY" secondItem="XD8-F1-ofb" secondAttribute="centerY" constant="-125" id="gBz-rz-l4a"/>
+                            <constraint firstItem="lJ8-vN-e3f" firstAttribute="centerX" secondItem="XD8-F1-ofb" secondAttribute="centerX" id="hhZ-xT-Mrw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGb-oI-Rpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PaintCode-SketchPlugin-feature.png" width="500" height="500"/>
+    </resources>
+</document>

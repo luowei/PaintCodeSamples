@@ -58,5 +58,8 @@ ReplicatorAnimate
 ## QuartzCode制作的Loading动画
 ![图形绘制](./doc/ReplicatorAnimate.gif)
 
-
+Telekinesis
+-------
+## Telekinesis绘制动态显示在iphone上
+![Telekinesis绘制](./doc/Telekinesis.gif)
 

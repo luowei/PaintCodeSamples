@@ -76,7 +76,7 @@ class MyView: UIView {
 //        UIColor.black.setStroke()
 //        curvePath.lineWidth = 2
 //        curvePath.stroke()
-        
+//        
 //        //MARK:绘制一个矩形
 //        let rectangleRect = UIEdgeInsetsInsetRect(self.bounds, UIEdgeInsetsMake(20, 20, 20, 20))
 //        let rectanglePath = UIBezierPath(rect: rectangleRect)

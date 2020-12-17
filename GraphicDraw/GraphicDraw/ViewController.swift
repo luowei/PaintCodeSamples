@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
     }
     
-    func updateTime(){
+    @objc func updateTime(){
         MyClockKit.hours = CGFloat(Date().hour())
         MyClockKit.minutes = CGFloat(Date().minute())
         MyClockKit.seconds = CGFloat(Date().second())

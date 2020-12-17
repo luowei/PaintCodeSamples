@@ -22,7 +22,7 @@ class MyCollectionViewController: UICollectionViewController {
         RunLoop.current.add(t, forMode: .commonModes)
     }
     
-    func updateTime(){
+    @objc func updateTime(){
         MyClockKit.hours = CGFloat(Date().hour())
         MyClockKit.minutes = CGFloat(Date().minute())
         MyClockKit.seconds = CGFloat(Date().second())

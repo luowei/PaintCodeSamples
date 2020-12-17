@@ -16,6 +16,8 @@
 		EA753EEC1DB87381003E37BF /* MyClockKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA753EE81DB87381003E37BF /* MyClockKit.swift */; };
 		EA753EED1DB87381003E37BF /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA753EE91DB87381003E37BF /* MyCollectionViewController.swift */; };
 		EA753EEE1DB87381003E37BF /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA753EEA1DB87381003E37BF /* MyView.swift */; };
+		EABCA5DE258B54D700634C4B /* ViewControllerAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCA5DD258B54D700634C4B /* ViewControllerAB.swift */; };
+		EABCA5E0258B566200634C4B /* Storyboard_B.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABCA5DF258B566200634C4B /* Storyboard_B.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		EA753EE81DB87381003E37BF /* MyClockKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClockKit.swift; sourceTree = "<group>"; };
 		EA753EE91DB87381003E37BF /* MyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 		EA753EEA1DB87381003E37BF /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		EABCA5DD258B54D700634C4B /* ViewControllerAB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAB.swift; sourceTree = "<group>"; };
+		EABCA5DF258B566200634C4B /* Storyboard_B.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard_B.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				EA753EDC1DB87313003E37BF /* Assets.xcassets */,
 				EA753EDE1DB87313003E37BF /* LaunchScreen.storyboard */,
 				EA753EE11DB87313003E37BF /* Info.plist */,
+				EABCA5DF258B566200634C4B /* Storyboard_B.storyboard */,
 			);
 			path = GraphicDraw;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 			children = (
 				EA753ED71DB87313003E37BF /* ViewController.swift */,
 				EA753EE91DB87381003E37BF /* MyCollectionViewController.swift */,
+				EABCA5DD258B54D700634C4B /* ViewControllerAB.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -134,6 +140,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -152,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABCA5E0258B566200634C4B /* Storyboard_B.storyboard in Resources */,
 				EA753EE01DB87313003E37BF /* LaunchScreen.storyboard in Resources */,
 				EA753EDD1DB87313003E37BF /* Assets.xcassets in Resources */,
 				EA753EDB1DB87313003E37BF /* Main.storyboard in Resources */,
@@ -171,6 +179,7 @@
 				EA753ED81DB87313003E37BF /* ViewController.swift in Sources */,
 				EA753EED1DB87381003E37BF /* MyCollectionViewController.swift in Sources */,
 				EA753ED61DB87313003E37BF /* AppDelegate.swift in Sources */,
+				EABCA5DE258B54D700634C4B /* ViewControllerAB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +307,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wodedata.GraphicDraw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -311,7 +320,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wodedata.GraphicDraw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -128,7 +128,7 @@ open class MyClockKit : NSObject {
         let _3Style = NSMutableParagraphStyle()
         _3Style.alignment = .center
 
-        let _3FontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 8), NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: _3Style]
+        let _3FontAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 8), NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.paragraphStyle: _3Style]
 
         let _3TextHeight: CGFloat = _3TextContent.boundingRect(with: CGSize(width: _3Rect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: _3FontAttributes, context: nil).size.height
         context?.saveGState()
@@ -143,7 +143,7 @@ open class MyClockKit : NSObject {
         let _6Style = NSMutableParagraphStyle()
         _6Style.alignment = .center
 
-        let _6FontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 8), NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: _6Style]
+        let _6FontAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 8), NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.paragraphStyle: _6Style]
 
         let _6TextHeight: CGFloat = _6TextContent.boundingRect(with: CGSize(width: _6Rect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: _6FontAttributes, context: nil).size.height
         context?.saveGState()
@@ -158,7 +158,7 @@ open class MyClockKit : NSObject {
         let _9Style = NSMutableParagraphStyle()
         _9Style.alignment = .center
 
-        let _9FontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 8), NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: _9Style]
+        let _9FontAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 8), NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.paragraphStyle: _9Style]
 
         let _9TextHeight: CGFloat = _9TextContent.boundingRect(with: CGSize(width: _9Rect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: _9FontAttributes, context: nil).size.height
         context?.saveGState()
@@ -173,7 +173,7 @@ open class MyClockKit : NSObject {
         let _12Style = NSMutableParagraphStyle()
         _12Style.alignment = .center
 
-        let _12FontAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 8), NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: _12Style]
+        let _12FontAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 8), NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.paragraphStyle: _12Style]
 
         let _12TextHeight: CGFloat = _12TextContent.boundingRect(with: CGSize(width: _12Rect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: _12FontAttributes, context: nil).size.height
         context?.saveGState()
